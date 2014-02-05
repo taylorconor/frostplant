@@ -18,6 +18,64 @@ body {
 	background: #fff;
 	-webkit-font-smoothing: antialiased;
 }
+.hidden {
+	display: none;
+}
+
+/* ********************** */
+/* Page header properties */
+/* ********************** */
+header.page-header {
+	width: 44em;
+	max-width: 100%;
+	padding: 2em 0 0;
+	margin: 0 auto;
+	text-align: center;
+}
+@media (max-width: 840px) {
+	header.page-header {
+		font-size: 12px;
+    }
+}
+@media (max-width: 540px) {
+	header.page-header {
+		font-size: 8px;
+		padding-top: 0;
+		width: 100%;
+    }
+}
+header.page-header .inner {
+	padding: 3em 2em 2.4em;
+	background: #444;
+	max-height: 178px;
+}
+header.page-header .inner h1 {
+	font-size: 2.5em;
+	font-weight: 200;
+	margin: 0;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 0.01em;
+	line-height: 1;
+}
+header.page-header ul.nav {
+	padding: 0em 0.5em 0;
+}
+header.page-header ul.nav li {
+	display: inline;
+	list-style-type: none;
+	text-transform: uppercase;
+	padding: 0 1em 0;
+	color: #414141;
+
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+header.page-header ul.nav li:hover {
+	color: #ff0000;
+}
 
 /* ********************* */
 /* Search bar properties */
@@ -69,63 +127,84 @@ input[type="search"][required]:invalid::-webkit-search-cancel-button:after {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	filter: alpha(opacity=0);
 }
-
-/* ********************** */
-/* Page header properties */
-/* ********************** */
-header.page-header {
-	width: 44em;
-	max-width: 100%;
-	padding: 2em 0 0;
-	margin: 0 auto;
-	text-align: center;
+header.search {
+	zoom: 1;
+	max-width: 42em;
+	margin: 2em auto 0;
+	padding: 0 1em;
 }
-@media (max-width: 840px) {
-	header.page-header {
-		font-size: 12px;
-    }
+header.search:before,
+header.search:after {
+	content: "";
+	display: table;
 }
-@media (max-width: 540px) {
-	header.page-header {
-		font-size: 8px;
-		padding-top: 0;
-		width: 100%;
-    }
+header.search:after {
+	clear: both;
 }
-header.page-header .inner {
-	padding: 3em 2em 2.4em;
-	background: #444;
-	max-height: 178px;
-}
-header.page-header:hover #hovertext {
-    color: #ff0000;
-}   
-header.page-header .inner h1 {
-	font-size: 2.5em;
+header.search input[type="search"] {
+	height: 3em;
+	border: 0;
+	font-family: inherit;
+	font-size: 1.5em;
 	font-weight: 200;
+	letter-spacing: 0.08em;
+	padding-left: 0.52em;
 	margin: 0;
-	color: #fff;
-	text-transform: uppercase;
-	letter-spacing: 0.01em;
-	line-height: 1;
-}
-header.page-header ul.nav {
-	padding: 0em 0.5em 0;
-}
-header.page-header ul.nav li {
-	display: inline;
-	list-style-type: none;
-	text-transform: uppercase;
-	padding: 0 1em 0;
-	color: #414141;
+	color: inherit;
+	opacity: 0.5;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+	width: 50%;
+	background: rgba(0,0,0,0.1);
+	margin-bottom: 4px;
+	width: 100%;
+	padding: 1em;
+	margin-bottom: 1em;
 
 	-webkit-transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
 	-o-transition: all 0.2s linear;
 	transition: all 0.2s linear;
 }
-header.page-header ul.nav li:hover {
-	color: #ff0000;
+header.search input[type="search"]:hover {
+	background: #ccc;
+}
+header.search input[type="search"]::-webkit-search-cancel-button:after {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	height: 1em;
+	font-size: 1em;
+	line-height: 1;
+	font-weight: normal;
+	padding-right: 1em;
+	cursor: pointer;
+}
+header.search input[type="search"]:focus {
+	background: rgba(0,0,0,0.05);
+	opacity: 1;
+	-ms-filter: none;
+	filter: none;
+	outline: none;
+}
+header.search .field {
+	position: relative;
+}
+header.search .field label {
+	padding-right: 10em;
+	font-size: 1.1em;
+	line-height: 1.2em;
+	padding-top: 0em;
+	padding-bottom: 3em;
+	display: block;
+}
+header.search .field .slider {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 10em;
+	height: 2em;
 }
 
 /* ******************** */
@@ -184,6 +263,9 @@ header.page-header ul.nav li:hover {
 	100% { transform: rotateX(0deg); opacity: 1; }
 }
 
+/* ************************* */
+/* Grid container properties */
+/* ************************* */
 header.container {
     width: 44em;
 	max-width: 100%;
@@ -240,13 +322,23 @@ header.container .grid li #interests #match {
 header.container .grid li:hover #interests #match {
 	color: #222;
 }
+/* Bottom row connect button properties */
 header.container .grid li .connect {
 	margin-top: 1em;
 	display: inline-block;
 }
-header.container .grid li .connect #item {
+header.container .grid li .connect img {
+	opacity:0.5;
 	margin: 0 0.5em;
 	max-height: 2em;
+
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+header.container .grid li .connect img:hover {
+	opacity:0.75;
 }
 
 @media (min-width: 768px) {
@@ -260,95 +352,4 @@ header.container .grid li .connect #item {
         clear: left;
         margin-right: 2%;
     }
-}
-
-header.search {
-	zoom: 1;
-	max-width: 42em;
-	margin: 2em auto 0;
-	padding: 0 1em;
-}
-header.search:before,
-header.search:after {
-	content: "";
-	display: table;
-}
-header.search:after {
-	clear: both;
-}
-header.search input[type="search"] {
-	height: 3em;
-	border: 0;
-	font-family: inherit;
-	font-size: 1.5em;
-	font-weight: 200;
-	letter-spacing: 0.08em;
-	padding-left: 0.52em;
-	margin: 0;
-	color: inherit;
-	opacity: 0.5;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-	filter: alpha(opacity=50);
-	width: 50%;
-	background: rgba(0,0,0,0.1);
-	margin-bottom: 4px;
-	width: 100%;
-	padding: 1em;
-	margin-bottom: 1em;
-
-	webkit-transition: all 0.2s linear;
-	-moz-transition: all 0.2s linear;
-	-o-transition: all 0.2s linear;
-	transition: all 0.2s linear;
-}
-header.search input[type="search"]:hover {
-	background: #ccc;
-}
-header.search input[type="search"]::-webkit-search-cancel-button:after {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-	height: 1em;
-	font-size: 1em;
-	line-height: 1;
-	font-weight: normal;
-	padding-right: 1em;
-	cursor: pointer;
-}
-header.search input[type="search"]:focus {
-	background: rgba(0,0,0,0.05);
-	opacity: 1;
-	-ms-filter: none;
-	filter: none;
-	outline: none;
-}
-header.search .field {
-	position: relative;
-}
-header.search .field label {
-	padding-right: 10em;
-	font-size: 1.1em;
-	line-height: 1.2em;
-	padding-top: 0em;
-	padding-bottom: 3em;
-	display: block;
-}
-header.search .field .slider {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 10em;
-	height: 2em;
-}
-.hidden {
-	display: none;
-}
-footer {
-	margin: 3em auto;
-	font-size: 1.4em;
-	text-align: center;
-}
-footer a {
-	color: inherit;
 }
