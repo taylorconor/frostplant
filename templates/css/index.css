@@ -266,17 +266,17 @@ header.search .field .slider {
 /* ************************* */
 /* Grid container properties */
 /* ************************* */
-header.container {
+header.grid-container {
     width: 44em;
 	max-width: 100%;
 	padding-bottom: 3em;
 	margin: 0 auto;
 	text-align: center;
 }
-header.container .grid li:hover {
+header.grid-container .grid li:hover {
 	background: rgb(230,230,230);
 }
-header.container .grid li #name {
+header.grid-container .grid li #name {
 	text-align: center;
 	display: block;
 	margin-top: 0.5em;
@@ -287,47 +287,47 @@ header.container .grid li #name {
 	-o-transition: all 0.2s linear;
 	transition: all 0.2s linear;
 }
-header.container .grid li:hover #name {
+header.grid-container .grid li:hover #name {
 	color: #ff0000;
 }
-header.container .grid li #img {
+header.grid-container .grid li #img {
 	max-height: 9em;
 }
-header.container .grid li #position {
+header.grid-container .grid li #position {
 	text-align: center;
 	display: block;
 	margin-top: 0.5em;
 	font-weight: 250;
 	font-size: 85%;
 }
-header.container .grid li #institution {
+header.grid-container .grid li #institution {
 	text-align: center;
 	display: block;
 	font-weight: 200;
 	font-size: 85%;
 }
-header.container .grid li #interests {
+header.grid-container .grid li #interests {
 	text-align: center;
 	display: block;
 	margin-top: 0.5em;
 	font-weight: 200;
 	font-size: 85%;
 }
-header.container .grid li #interests #match {
+header.grid-container .grid li #interests #match {
 	-webkit-transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
 	-o-transition: all 0.2s linear;
 	transition: all 0.2s linear;
 }
-header.container .grid li:hover #interests #match {
+header.grid-container .grid li:hover #interests #match {
 	color: #222;
 }
 /* Bottom row connect button properties */
-header.container .grid li .connect {
+header.grid-container .grid li .connect {
 	margin-top: 1em;
 	display: inline-block;
 }
-header.container .grid li .connect img {
+header.grid-container .grid li .connect img {
 	opacity:0.5;
 	margin: 0 0.5em;
 	max-height: 2em;
@@ -337,7 +337,7 @@ header.container .grid li .connect img {
 	-o-transition: all 0.2s linear;
 	transition: all 0.2s linear;
 }
-header.container .grid li .connect img:hover {
+header.grid-container .grid li .connect img:hover {
 	opacity:0.75;
 }
 

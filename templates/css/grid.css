@@ -1,0 +1,147 @@
+
+/* ******************** */
+/* **** Animations **** */
+/* ******************** */
+.grid {
+	max-width: 100%;
+	perspective: 1300px;
+	margin-right: 2em;
+}
+.grid li {
+	transform-style: preserve-3d;
+	width: 30%;
+	display: inline-block;
+	padding: 2em 2em 0.75em;
+	margin: 0 0.25em 0.5em 0.25em;
+	background: rgb(240,240,240);
+	opacity: 0;
+
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+.grid li.shown,
+.no-js .grid li,
+.no-cssanimations .grid li {
+	opacity: 1;
+}
+.grid.effect {
+	-webkit-perspective: 1300px;
+	-moz-perspective: 1300px;
+	perspective: 1300px;
+}
+.grid.effect li.animate {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: 0% 0%;
+	-moz-transform-origin: 0% 0%;
+	transform-origin: 0% 0%;
+	-webkit-transform: rotateX(-80deg);
+	-moz-transform: rotateX(-80deg);
+	transform: rotateX(-80deg);
+	-webkit-animation: flip .8s ease-in-out forwards;
+	-moz-animation: flip .8s ease-in-out forwards;
+	animation: flip .8s ease-in-out forwards;
+}
+@-webkit-keyframes flip {
+	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+}
+@-moz-keyframes flip {
+	100% { -moz-transform: rotateX(0deg); opacity: 1; }
+}
+@keyframes flip {
+	100% { transform: rotateX(0deg); opacity: 1; }
+}
+
+/* ************************* */
+/* ** Container Properties * */
+/* ************************* */
+header.grid-container {
+    width: 44em;
+	max-width: 100%;
+	padding-bottom: 3em;
+	margin: 0 auto;
+	text-align: center;
+}
+header.grid-container .grid li:hover {
+	background: rgb(230,230,230);
+}
+header.grid-container .grid li #name {
+	text-align: center;
+	display: block;
+	margin-top: 0.5em;
+	font-weight: 500;
+
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+header.grid-container .grid li:hover #name {
+	color: #ff0000;
+}
+header.grid-container .grid li #img {
+	max-height: 9em;
+}
+header.grid-container .grid li #position {
+	text-align: center;
+	display: block;
+	margin-top: 0.5em;
+	font-weight: 250;
+	font-size: 85%;
+}
+header.grid-container .grid li #institution {
+	text-align: center;
+	display: block;
+	font-weight: 200;
+	font-size: 85%;
+}
+header.grid-container .grid li #interests {
+	text-align: center;
+	display: block;
+	margin-top: 0.5em;
+	font-weight: 200;
+	font-size: 85%;
+}
+header.grid-container .grid li #interests #match {
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+header.grid-container .grid li:hover #interests #match {
+	color: #222;
+}
+/* Bottom row connect button properties */
+header.grid-container .grid li .connect {
+	margin-top: 1em;
+	display: inline-block;
+}
+header.grid-container .grid li .connect img {
+	opacity:0.5;
+	margin: 0 0.5em;
+	max-height: 2em;
+
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+header.grid-container .grid li .connect img:hover {
+	opacity:0.75;
+}
+
+@media (min-width: 768px) {
+    .browser {
+        float: right;
+        clear: right;
+        width: 49%;
+    }
+    .browser.jquery {
+        float: left;
+        clear: left;
+        margin-right: 2%;
+    }
+}
