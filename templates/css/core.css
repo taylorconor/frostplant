@@ -37,18 +37,6 @@ header.page-header {
 	margin: 0 auto;
 	text-align: center;
 }
-@media (max-width: 840px) {
-	header.page-header {
-		font-size: 12px;
-    }
-}
-@media (max-width: 540px) {
-	header.page-header {
-		font-size: 8px;
-		padding-top: 0;
-		width: 100%;
-    }
-}
 header.page-header .inner {
 	padding: 3em 2em 2.4em;
 	background: #444;
@@ -97,6 +85,10 @@ header.page-main .hero {
 	margin: 0 2em 2em 2em;
 	background: rgb(240,240,240);
 	text-align: left;
+}
+
+header.page-main .hero p {
+	padding: 0 1em;
 }
 
 
@@ -228,4 +220,26 @@ header.search .field .slider {
 	right: 0;
 	width: 10em;
 	height: 2em;
+}
+
+/* ************************************ */
+/* Global page media calls for resizing */
+/* ************************************ */
+@media (max-width: 840px) {
+	header.page-header {
+		font-size: 12px;
+    }
+	header.page-main {
+		font-size: 14px;
+	}
+}
+@media (max-width: 540px) {
+	header.page-header {
+		font-size: 8px;
+		padding-top: 0;
+		width: 100%;
+    }
+	header.page-main {
+		font-size: 10px;
+	}
 }
