@@ -87,10 +87,15 @@ header.page-main .hero {
 	text-align: left;
 }
 
+header.page-main .hero video {
+	width:36em;
+	height:20em;
+	max-height:100%;
+}
+
 header.page-main .hero p {
 	padding: 0 1em;
 }
-
 
 /* ********************* */
 /* Search bar properties */
