@@ -32,7 +32,8 @@ body {
 /* ********************** */
 header.page-header {
 	width: 44em;
-	max-width: 100%;
+	/*max-width: 100%;*/
+	max-width: 44em;
 	padding: 2em 0 0;
 	margin: 0 auto;
 	text-align: center;
@@ -75,9 +76,12 @@ header.page-header ul.nav li:hover {
 /* ******************** */
 header.page-main {
 	width: 42em;
-	max-width: 100%;
-	padding: 1em 0 0;
+	/*max-width: 100%;*/
+	max-width: 42em;
+	/*padding: 2em 0 0;*/
 	margin: 0 auto;
+	/*margin: 2em auto 0;*/
+	/*padding: 0 1em;*/
 	text-align: center;
 }
 header.page-main .hero {
@@ -90,7 +94,6 @@ header.page-main .hero {
 header.page-main .hero video {
 	width:36em;
 	height:20em;
-	max-height:100%;
 }
 
 header.page-main .hero p {
@@ -230,7 +233,7 @@ header.search .field .slider {
 /* ************************************ */
 /* Global page media calls for resizing */
 /* ************************************ */
-@media (max-width: 840px) {
+/*@media (max-width: 840px) {
 	header.page-header {
 		font-size: 12px;
     }
@@ -247,4 +250,4 @@ header.search .field .slider {
 	header.page-main {
 		font-size: 10px;
 	}
-}
+}*/

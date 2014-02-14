@@ -137,6 +137,18 @@ header.grid-container .grid li .connect img:hover {
 	opacity:0.75;
 }
 
+/*@media (max-width: 840px) {
+	.grid {
+		margin-right: 0;
+		margin-left: 2em;
+	}
+	.grid li {
+		width: 80%;
+		display: inline-block;
+		/*padding: 2em 2em 0.75em;
+		margin: 0 0.25em 0.5em 0.25em;*/
+/*	}
+}
 @media (min-width: 768px) {
     .browser {
         float: right;
@@ -148,4 +160,4 @@ header.grid-container .grid li .connect img:hover {
         clear: left;
         margin-right: 2%;
     }
-}
+}*/
