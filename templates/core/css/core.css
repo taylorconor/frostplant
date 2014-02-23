@@ -75,13 +75,10 @@ header.page-header ul.nav li:hover {
 /* Main page properties */
 /* ******************** */
 header.page-main {
-	width: 42em;
-	/*max-width: 100%;*/
-	max-width: 42em;
-	/*padding: 2em 0 0;*/
+	width: 44em;
+	max-width: 44em;
+	padding: 0 1em 0 1em;
 	margin: 0 auto;
-	/*margin: 2em auto 0;*/
-	/*padding: 0 1em;*/
 	text-align: center;
 }
 header.page-main .hero {
@@ -229,6 +226,15 @@ header.search .field .slider {
 	width: 10em;
 	height: 2em;
 }
+
+/* TODO:
+ *
+ * Write some @media resizing functions that will *convert* the website
+ * into a mobile-site interface. For example, it should convert the grid
+ * of cells into a list of cells, where the cells are 3x wide and x tall,
+ * and a phone user can jsut scroll down through them all.
+ *
+ */
 
 /* ************************************ */
 /* Global page media calls for resizing */
