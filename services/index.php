@@ -25,7 +25,7 @@ include "core.php";
 				</div>
 				<p>If you have a great idea for a new website, app or service that you'd like to get off the ground, but don't have the technical skills to start, I can help.</p>
                 <p>I've worked on projects for customers such as the <a href="http://dudodgeball.com">DU Dudgeball Club website</a>, and helped with the initial development of <a href="http://gymmagazine.co.uk">Gym Magazine</a>'s iPad magazine. I also work actively on my own projects, including <a href="http://frostplantgames.com">Frostplant Games</a> and <a href="http://frostplant.com/clublink">ClubLink</a>, amongst many other ongoing projects.</p>
-                <p>Please <a href="mailto:conor@frostplant.com">contact me</a> if you have any questions or requests, and maybe we can start working together!</p>
+                <p>Please <a href="mailto:conor@frostplant.com">contact me</a> if you have any questions or requests, and maybe we can start working together soon!</p>
 			</div>
 		</header>
 		
