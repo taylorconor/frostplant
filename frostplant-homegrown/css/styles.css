@@ -1,0 +1,65 @@
+.page {
+	max-width: 900px;
+	margin: auto;
+}
+
+.hero {
+	margin: auto;
+}
+
+.hero .logo {
+	max-width: 85%;
+	height: auto;
+	display: block;
+	margin: auto;
+	margin-top: 25px;
+}
+
+.showcase {
+	max-width: 100%;
+	margin: auto;
+	margin-top: 25px;
+}
+
+.showcase .item {
+	background-color: rgba(1, 1, 1, 0.1);
+	
+	margin: auto;
+	margin-bottom: 5px;
+	max-width: 32.75%;
+	display: inline-block;
+}
+
+.showcase .item:hover{
+	background-color: rgba(1, 1, 1, 0.15);
+}
+
+.showcase .item .icon {
+	max-width: 85%;
+	height: auto;
+	display: block;
+	margin: auto;
+}
+
+.showcase .item .text {
+	margin: 10px;
+	text-align: center;
+	font-size: 20px;
+	letter-spacing: 1px;
+	font-family: dense-regular;
+}
+
+/* resize options */
+
+@media (max-width: 650px) {
+	.showcase .item {
+		color: red;
+		max-width: 49.5%;
+	}
+}
+
+/* custom fonts */
+@font-face {
+	font-family: dense-regular;
+	src: url(../fonts/Dense-Regular.otf);
+}

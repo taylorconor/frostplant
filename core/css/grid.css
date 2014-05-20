@@ -1,0 +1,223 @@
+/* **************************************************** */
+/* ***** Properties for the dynamic grid of users ***** */
+/* **************************************************** */
+
+
+/* ******************** */
+/* **** Animations **** */
+/* ******************** */
+.grid {
+	max-width: 100%;
+	perspective: 1300px;
+	/*margin-right: 2em;*/
+}
+.grid li {
+	transform-style: preserve-3d;
+	width: 44%;
+	display: inline-block;
+	padding: 2em 2em 0.75em;
+	margin: 0 0.25em 0.5em 0.25em;
+	background: rgb(240,240,240);
+	opacity: 0;
+	cursor: pointer;
+
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+.grid li.shown,
+.no-js .grid li,
+.no-cssanimations .grid li {
+	opacity: 1;
+}
+.grid.effect {
+	-webkit-perspective: 1300px;
+	-moz-perspective: 1300px;
+	perspective: 1300px;
+}
+.grid.effect li.animate {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: 0% 0%;
+	-moz-transform-origin: 0% 0%;
+	transform-origin: 0% 0%;
+	-webkit-transform: rotateX(-80deg);
+	-moz-transform: rotateX(-80deg);
+	transform: rotateX(-80deg);
+	-webkit-animation: flip .8s ease-in-out forwards;
+	-moz-animation: flip .8s ease-in-out forwards;
+	animation: flip .8s ease-in-out forwards;
+}
+@-webkit-keyframes flip {
+	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+}
+@-moz-keyframes flip {
+	100% { -moz-transform: rotateX(0deg); opacity: 1; }
+}
+@keyframes flip {
+	100% { transform: rotateX(0deg); opacity: 1; }
+}
+
+/* ************************* */
+/* ** Container Properties * */
+/* ************************* */
+header.grid-container {
+    width: 50em;
+	max-width: 50em;
+	padding-bottom: 3em;
+	margin: 0 auto;
+	text-align: center;
+}
+header.grid-container .grid li:hover {
+	background: rgb(230,230,230);
+}
+header.grid-container .grid li #title {
+	text-align: center;
+	display: block;
+	margin-top: 0.5em;
+	font-weight: 500;
+	font-size: 1.2em;
+
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+header.grid-container .grid li:hover #title {
+	color: #ff0000;
+}
+header.grid-container .grid li img {
+	max-height: 9em;
+	position: relative;
+}
+header.grid-container .grid li #subtext {
+	text-align: center;
+	display: block;
+	margin-top: 0.5em;
+	font-weight: 200;
+	font-size: 85%;
+}
+header.grid-container .grid li #subtext #bold {
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+header.grid-container .grid li:hover #subtext #bold {
+	color: #222;
+}
+
+/***** Mail icon animations and overlays *****/
+header.grid-container .grid li .mailicon[id="l0"] {
+	position: absolute;
+	right: 36%;
+	bottom: 25%;
+	-webkit-animation: mailicon_animation_out 0.25s forwards;
+    -moz-animation:    mailicon_animation_out 0.25s forwards;
+    -o-animation:      mailicon_animation_out 0.25s forwards;
+    animation:         mailicon_animation_out 0.25s forwards;
+}
+header.grid-container .grid li:hover .mailicon[id="l0"] {
+	-webkit-animation: mailicon_animation_in 0.25s forwards;
+    -moz-animation:    mailicon_animation_in 0.25s forwards;
+    -o-animation:      mailicon_animation_in 0.25s forwards;
+    animation:         mailicon_animation_in 0.25s forwards;
+}
+@-webkit-keyframes mailicon_animation_in {
+	from { bottom: 25%; }
+	to { bottom: 28%; }
+}
+@-webkit-keyframes mailicon_animation_out {
+	from { bottom: 28%; }
+	to { bottom: 25%; }
+}
+@-moz-keyframes mailicon_animation_in {
+	from { bottom: 25%; }
+	to { bottom: 28%; }
+}
+@-moz-keyframes mailicon_animation_out {
+	from { bottom: 28%; }
+	to { bottom: 25%; }
+}
+@-o-keyframes mailicon_animation_in {
+	from { bottom: 25%; }
+	to { bottom: 28%; }
+}
+@-o-keyframes mailicon_animation_out {
+	from { bottom: 28%; }
+	to { bottom: 25%; }
+}
+@keyframes mailicon_animation_in {
+	from { bottom: 25%; }
+	to { bottom: 28%; }
+}
+@keyframes mailicon_animation_out {
+	from { bottom: 28%; }
+	to { bottom: 25%; }
+}
+/*********************************************/
+
+
+/***** Services icon animations and overlays *****/
+header.grid-container .grid li .servicesicon[id="l0"] {
+	position: absolute;
+	bottom: 41%;
+	-webkit-animation: servicesicon_animation_out 0.25s;
+    -moz-animation:    servicesicon_animation_out 0.25s;
+    -o-animation:      servicesicon_animation_out 0.25s;
+    animation:         servicesicon_animation_out 0.25s;
+}
+header.grid-container .grid li:hover .servicesicon[id="l0"] {
+	-webkit-animation: servicesicon_animation_in 0.25s infinite;
+    -moz-animation:    servicesicon_animation_in 0.25s infinite;
+    -o-animation:      servicesicon_animation_in 0.25s infinite;
+    animation:         servicesicon_animation_in 0.25s infinite;
+}
+@-webkit-keyframes servicesicon_animation_in {
+	from { bottom: 41%; left: 30%}
+	to { bottom: 42%; left: 30.2% }
+}
+@-webkit-keyframes servicesicon_animation_out {
+	from { bottom: 42%; left: 30.2% }
+	to { bottom: 41%; left: 30%}
+}
+@-moz-keyframes servicesicon_animation_in {
+    from { bottom: 41%; left: 30%}
+	to { bottom: 42%; left: 30.2% }
+}
+@-moz-keyframes servicesicon_animation_out {
+    from { bottom: 42%; left: 30.2% }
+	to { bottom: 41%; left: 30%}
+}
+@-o-keyframes servicesicon_animation_in {
+    from { bottom: 41%; left: 30%}
+	to { bottom: 42%; left: 30.2% }
+}
+@-o-keyframes servicesicon_animation_out {
+    from { bottom: 42%; left: 30.2% }
+	to { bottom: 41%; left: 30%}
+}
+@keyframes servicesicon_animation_in {
+    from { bottom: 41%; left: 30%}
+	to { bottom: 42%; left: 30.2% }
+}
+@keyframes servicesicon_animation_out {
+    from { bottom: 42%; left: 30.2% }
+	to { bottom: 41%; left: 30%}
+}
+/************************************************/
+
+header.grid-container .grid li:hover .abouticon {
+	-webkit-animation: abouticon_animation 0.4s forwards;
+}
+@-webkit-keyframes abouticon_animation {
+	0% { -webkit-transform: rotate(0deg); }
+	17% { -webkit-transform: rotate(10deg); }
+	34% { -webkit-transform: rotate(-10deg); }
+	51% { -webkit-transform: rotate(6deg); }
+	68% { -webkit-transform: rotate(-6deg); }
+	85% { -webkit-transform: rotate(3deg); }
+	100% { -webkit-transform: rotate(0deg); }
+}
