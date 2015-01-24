@@ -81,6 +81,13 @@ header.page-header .inner img {
     cursor: pointer;
 }
 
+header.page-header .inner .github-banner {
+    display: block;
+    position: relative;
+    top: -127px;
+    left: 619px;
+}
+
 /* ******************** */
 /* Main page properties */
 /* ******************** */

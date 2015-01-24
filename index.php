@@ -17,6 +17,7 @@ include "core.php";
 	</head>
 	<body>
         <? echo generateHeader(); ?>
+
 		<header class="grid-container">
 			<ul class="grid effect" id="grid">
 				<li onclick="window.location.href='http://frostplantgames.com'">
